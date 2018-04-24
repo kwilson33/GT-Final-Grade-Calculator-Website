@@ -1,5 +1,5 @@
-*.txt linguist-language=CSS
-*.pdf linguist-language = JavaScript
+*.c linguist-language=CSS
+*.cpp linguist-language = JavaScript
 
 
 
