@@ -1,4 +1,5 @@
-*.html linguist-language=CSS,HTML,JavaScript
+*.txt linguist-language=CSS
+*.pdf linguise-language = JavaScript
 
 
 
