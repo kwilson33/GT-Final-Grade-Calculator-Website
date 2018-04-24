@@ -1,3 +1,4 @@
-*.gitattributes linguist-language=CSS
+*.html linguist-language=CSS,HTML,JavaScript
+
 
 
