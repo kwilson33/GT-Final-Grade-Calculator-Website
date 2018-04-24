@@ -1,3 +1,5 @@
 *.html linguist-language=CSS
 *.html linguist-language=JavaScript
+*.html linguist-language=HTML
+
 
