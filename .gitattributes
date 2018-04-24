@@ -1,5 +1,5 @@
 *.c linguist-language=CSS
-*.html linguist-language = JavaScript
+*.cpp linguist-language = JavaScript
 
 
 
