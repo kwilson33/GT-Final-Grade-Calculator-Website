@@ -1,1 +1,243 @@
 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GT Final Grade Calculator</title>
+</head>
+
+<style>
+.button {
+  background-color: #D7E60A;
+  background-image: url("https://cdn.drawception.com/images/panels/2012/9-3/4Sc9d2j18A-4.png");
+  background-blend-mode:lighten;
+  style = opacity:0.4;
+  color: black;
+  padding: 40px 80px;
+  text-align: center;
+  display: inline-block;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 64px;
+  font-family: Georgia;
+  margin: 4px 2px;
+  cursor: wait
+}
+body {
+  background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.3)),url("https://golficity.com/wp-content/uploads/2016/02/buzz-georgia-tech.gif");
+  background-position:center;
+  //background-color: rgba(255,0,0,0.6);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+h1 {
+  color: white;
+  font-size: 75px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', 'Comic Sans';
+  class = "rainbow";
+  text-align: center;
+  text-decoration: underline;
+  text-shadow: 7px 7px black;
+  //font-family: Arial, Helvetica, sans-serif;
+}
+/*found online */
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+h2 {
+  color: #054C06;
+  text-align:center;
+  font-size: 60px;
+  text-shadow: 3px 2px #B300FF;
+  font-family: Comic Sans MS;
+}
+h3 {
+  text-align:center;
+  font-size: px;
+  font-weight: bold;
+  color: purple;
+}
+h4 {
+  text-align:center;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  color: purple;
+}
+p {
+  color: #0600FF;
+  font-family: Comic Sans MS;
+  font-size: 25px;
+  text-align:center;
+}
+p::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+  color:#FF0000;
+  text-shadow: 3px 2px #000FFF;
+}
+img {
+  border-radius: 8px;
+  border: 8px dotted black;
+}
+input {
+  height: 45px;
+  width : 200px;
+  color: blue;
+  font-size: 25px;
+  background-color: #3CBC8D;
+  border: 2px solid black;
+}
+select {
+  font-size: 20px;
+  font-family: Cursive;
+  color:red;
+  background-color:black;
+}
+</style>
+
+
+
+<body>
+
+
+  <h1 class = "rainbow">GT Final Grade Calculator</h1>
+
+
+
+  <p> Hey smart stuff. Enter those sweet, <i>sweet</i> grades below ;)</p>
+
+
+
+<h2> Show me your Grades & Extra Credit </h2>
+<h4> And maybe I'll let you see my stinger ;)</h4>
+
+<p> Quiz Grades:<input id="aq" type="text" placeholder="ie. 85,89,95 " min="0" ></p>
+<p> Test Grades:<input id="at" type="text" placeholder="ie. 90,83,76" min="0"  ></p>
+<p> Homework Grades:<input id="ah" type="text" placeholder="ie. 95,80,75" min="0"  ></p>
+<p> Class Participation Average:<input id="acp" type="text" placeholder="ie. 90,80,85" min="0"  ></p>
+<p> Extra Credit Points:<input id="extraCredit" type="text" placeholder="ie. 13" min="0" ></p>
+
+<br>
+
+<p> Choose your course: <select id="subject" size = 7>
+
+  <option value="AE1350">AE1350</option>
+  <option value="AE1601">AE1601</option>
+  <option value="AE1770">AE1770</option>
+
+  <option value="CHEM1211">CHEM1211</option>
+  <option value="CHEM1212">CHEM1212</option>
+  <option value="CHEM1315">CHEM1315</option>
+  <option value="CHEM2311">CHEM2311</option>
+
+  <option value="ECON1101">ECON1101</option>
+  <option value="ECON2100">ECON2100</option>
+  <option value="ECON2101">ECON2101</option>
+
+  <option value="ENGL1101">ENGL1101</option>
+  <option value="ENGL1102">ENGL1102</option>
+
+  <option value="MATH1111">MATH1111</option>
+  <option value="MATH1113">MATH1113</option>
+  <option value="MATH1501">MATH1501</option>
+  <option value="MATH1502">MATH1502</option>
+
+  <option value="PHYS2211">PHYS2211</option>
+  <option value="PHYS2212">PHYS2212</option>
+  <option value="PHYS2213">PHYS2213</option>
+
+  <option value="PHIL2010">PHIL2010</option>
+  <option value="PHIL2025">PHIL2025</option>
+
+  <option value="PSYC2005">PSYC2005</option>
+  <option value="PSYC2020">PSYC2020</option>
+  <option value="PSYC2103">PSYC2103</option>
+
+  <option value="NRE2110">NRE2110</option>
+  <option value="NRE2698">NRE2698</option>
+
+  <option value="CS1371">CS1371</option>
+  <option value="CS1331">CS1331</option>
+  <option value="CS1332">CS1332</option>
+
+  <option value="ECE1010">ECE1010</option>
+  <option value="ECE2020">ECE2020</option>
+  <option value="ECE2026">ECE2026</option>
+</select> </p>
+
+
+
+<p> Hey buzz, what do I need on the final exam to get a <select id="desired_grade" size = 5>
+  <option value="90">A</option>
+  <option value="80">B</option>
+  <option value="70">C</option>
+  <option value="60">D</option>
+  <option value="0">F</option>
+</select> in the class? </p>
+
+
+<center><img src="https://s-media-cache-ak0.pinimg.com/originals/55/ae/fb/55aefb14f665cc1bb4b28298833f7cce.jpg" width= "200" height = "200"/></center>
+
+
+<br>
+
+<script>
+// get weights for selected course
+// request data from web client
+function webGet(websiteURL) {
+  var  xmlHttpAddress = new XMLHttpRequest();
+  xmlHttpAddress.open( "GET", websiteURL, false );
+  xmlHttpAddress.send( null );
+  return xmlHttpAddress.responseText;
+}
+// this function calculates average of comma split scores
+function averageScoresComp (input) {
+  // average and how many commas
+  var average = 0;
+  var commas = 0;
+  // count the number of commas in the input
+  for (var i = 0; i < input.length; i++)
+  if (input.charAt(i) == ',') {commas++;}
+  // split the input, make float, add to sum of scores
+  for (var i = 0; i <= commas; i++)
+  average = average + Number(input.split(',')[i]);
+  // return (running sum) / (number of commas + 1)
+  return average / (commas + 1);
+}
+function computegrade() {
+  var at = averageScoresComp(document.getElementById('at').value);
+  var aq = averageScoresComp(document.getElementById('aq').value);
+  var ah = averageScoresComp(document.getElementById('ah').value);
+  var acp = averageScoresComp(document.getElementById('acp').value);
+  var extraCredit = averageScoresComp(document.getElementById('extraCredit').value);
+  //structure to store class data
+  var classData = {
+    subject      : document.getElementById("subject").value,
+    desired_grade: document.getElementById("desired_grade").value,
+    input          : 'http://cs1371.gatech.edu/getClassInfo/?class='
+  };
+  classData.input = 'http://cs1371.gatech.edu/getClassInfo/?class=' + classData.subject;
+  var gradeWeights = webGet(classData.input);
+  gradeWeights = JSON.parse(gradeWeights);
+  var neededGrade = (classData.desired_grade - 1*extraCredit - (at* gradeWeights.test/100)  - (gradeWeights.quiz/100 * aq) - (gradeWeights.homework/100 * ah) - (gradeWeights.class_participation/100 * acp)) *100/(gradeWeights.final_exam);
+  neededGrade = Math.round(neededGrade*100)/100;
+  if (isNaN(neededGrade))  document.getElementById("output").innerHTML = "No grades inputted, try again";
+  else document.getElementById("output").innerHTML = neededGrade;
+}
+</script>
+<h2> Click below, if you dare ;) </h2>
+<p>You must get a Final Exam grade greater than or equal to: </p>
+<h2 id = "output"></h2>
+<p><button onclick= "computegrade()" class="button" type="button ">Calculate Desired Grade?</button></p>
+
+
+</body>
+
+</html>
